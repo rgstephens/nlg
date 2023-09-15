@@ -27,14 +27,6 @@ sequenceDiagram
     nlg_endpoint->>rasa: return response
 ```
 
-## Dump Responses Endpoint
-
-You can hit the following endpoint to dump all responses in JSON format:
-
-```sh
-curl --location 'http://127.0.0.1:8000/api/responses/'
-```
-
 ## Starting the App
 
 ```sh
@@ -43,14 +35,18 @@ python manage.py runserver
 # Browse to http://127.0.0.1:8000/admin and created Rasa responses
 ```
 
-## Setup Steps
+## Adding Responses
 
-- https://django-ninja.rest-framework.com/tutorial/
+To add responses, open the admin ui at [http://127.0.0.1:8000/admin/responses/response/](http://127.0.0.1:8000/admin/responses/response/)
+
+![Admin UI](assets/django_admin.png)
+
+## Dump Responses Endpoint
+
+You can hit the following endpoint to dump all responses in JSON format:
 
 ```sh
-django-admin startproject nlg
-cd nlg
-mkdir responses  # responses table
+curl --location 'http://127.0.0.1:8000/api/responses/'
 ```
 
 ## CRV Version
