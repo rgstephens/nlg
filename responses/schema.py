@@ -16,7 +16,7 @@ class ChannelSchema(Schema):
     name: str
 
 class NLGSchema(Schema):
-    text: str
+    text: Optional[str]
     slots: Dict[str, Any]
     # slots: Optional[Iterable[SlotSchema]]
     channel: Optional[ChannelSchema]
